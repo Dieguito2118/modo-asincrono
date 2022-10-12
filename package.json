@@ -1,0 +1,30 @@
+{
+  "name": "modo-asincrono",
+  "version": "1.0.0",
+  "description": "modo-asincrono",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon promises/1_simple.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dieguito2118/modo-asincrono.git"
+  },
+  "keywords": [
+    "es6",
+    "es2015",
+    "modo",
+    "asincrono"
+  ],
+  "author": "Juan Diego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dieguito2118/modo-asincrono/issues"
+  },
+  "homepage": "https://github.com/Dieguito2118/modo-asincrono#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
