@@ -1,6 +1,6 @@
 const http = require('xmlhttprequest').XMLHttpRequest
 
-const url = "https://pokeapi.co/api/v2/tye"
+const url = "https://pokeapi.co/api/v2/type"
 
 function get_data(endpoint){
 
@@ -28,7 +28,7 @@ function exito(data){
     const tipos = JSON.parse(data).results
     //Recorrer el arreglo
     tipos.forEach(function (element) {
-        console.log(element)
+        console.log(`Tipo : ${element.name}`)
         console.log(`--------------------`)
     });
 }
@@ -37,9 +37,14 @@ function fallo(status){
     console.log(status)
 }
 
-get_data(url)
-    .then(function(data){
-    exito(data)
-    }).catch(function(error){
-    fallo(Error(error))
-})
+const f = async function(){
+    try{
+    let response = await get_data(url)
+    exito(response)
+    } catch(status){
+        fallo(status)
+    }
+
+}
+
+f()
